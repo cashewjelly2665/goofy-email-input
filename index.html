@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Input Made Easy</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    #email { font-size: 20px; padding: 10px; width: 80%; max-width: 300px; }
+    #keyboard { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+    .key {
+      padding: 10px;
+      margin: 5px;
+      font-size: 20px;
+      border: 1px solid black;
+      cursor: pointer;
+      width: 40px;
+      user-select: none;
+    }
+    #restart {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background: red;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Type your email</h2>
+<input id="email" disabled />
+<div id="keyboard"></div>
+<button id="restart">Restart</button>
+
+<script>
+// Code will go here
+</script>
+
+</body>
+</html>
