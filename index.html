@@ -53,8 +53,8 @@ function shuffleKeyboard() {
     btn.textContent = char;
     btn.onclick = () => {
       input += char;
-      emailField.value = input;
-      idleTime = 0; // Reset idle time
+      emailField.textContent = input;
+      idleTime = 0;
     };
     keyboard.appendChild(btn);
   });
@@ -63,7 +63,7 @@ function shuffleKeyboard() {
 function forceInsertRandom() {
   const randomChar = chars[Math.floor(Math.random() * chars.length)];
   input += randomChar;
-  emailField.value = input;
+  emailField.textContent = input;
 }
 
 function startShuffle() {
@@ -86,7 +86,7 @@ restartBtn.onclick = () => {
   const chance = Math.random();
   if (chance < 0.5) {
     input = '';
-    emailField.value = '';
+    emailField.textContent = '';
     idleTime = 0;
     interval = 500;
     startShuffle();
@@ -100,7 +100,6 @@ restartBtn.onclick = () => {
 
 startShuffle();
 startIdleWatcher();
-
 </script>
 
 </body>
